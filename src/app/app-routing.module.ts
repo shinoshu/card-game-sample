@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CardComponent } from './card/card.component';
+import { FieldComponent } from './field/field.component';
 
 const routes: Routes = [
-  { path: '', component: CardComponent }
+  { path: '', component: FieldComponent }
 ];
 
 @NgModule({
