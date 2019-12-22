@@ -14,13 +14,15 @@ import { MatListModule } from '@angular/material/list';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CardComponent } from './card/card.component';
 import { FieldComponent } from './field/field.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     CardComponent,
-    FieldComponent
+    FieldComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
