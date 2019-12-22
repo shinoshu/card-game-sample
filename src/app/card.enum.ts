@@ -1,5 +1,4 @@
 export enum Card {
-  Back = 'assets/images/card_back.png',
   Club_01 = 'assets/images/card_club_01.png',
   Club_02 = 'assets/images/card_club_02.png',
   Club_03 = 'assets/images/card_club_03.png',
