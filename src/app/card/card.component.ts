@@ -9,10 +9,12 @@ import { Card } from '../card.enum';
 export class CardComponent implements OnInit {
   isFront = false;
 
+  backImage = 'assets/images/card_back.png';
+
   @Input() card: Card;
 
   image(): string {
-    return this.isFront ? this.card : Card.Back;
+    return this.isFront ? this.card : this.backImage;
   }
 
   constructor() { }
