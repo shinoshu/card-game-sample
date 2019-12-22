@@ -1,1 +1,3 @@
-<p>field works!</p>
+<ng-container *ngFor="let imagePath of imagePaths">
+  <app-card [imagePath]="imagePath"></app-card>
+</ng-container>
