@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CardComponent } from './card/card.component';
 import { FieldComponent } from './field/field.component';
 
@@ -30,7 +31,8 @@ import { FieldComponent } from './field/field.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
