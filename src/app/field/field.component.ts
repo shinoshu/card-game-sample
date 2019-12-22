@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Card } from '../card.enum';
-import * as lodash from 'lodash';
 
 @Component({
   selector: 'app-field',
@@ -8,16 +7,10 @@ import * as lodash from 'lodash';
   styleUrls: ['./field.component.scss']
 })
 export class FieldComponent implements OnInit {
-  cards: Card[] = [];
+  @Input() cards: Card[] = [];
 
   constructor() { }
 
   ngOnInit() {
-    for (const [key] of Object.entries(Card)) {
-      this.cards.push(Card[key]);
-    }
-
-    this.cards = lodash.shuffle(this.cards);
-    this.cards = this.cards.slice(0, 5);
   }
 }

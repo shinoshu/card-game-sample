@@ -7,9 +7,9 @@ import { Card } from '../card.enum';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  isFront = false;
-
   backImage = 'assets/images/card_back.png';
+
+  @Input() isFront = false;
 
   @Input() card: Card;
 
