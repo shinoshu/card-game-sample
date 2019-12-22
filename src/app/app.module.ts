@@ -15,6 +15,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CardComponent } from './card/card.component';
 import { FieldComponent } from './field/field.component';
 import { ContainerComponent } from './container/container.component';
+import { ActionComponent } from './action/action.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContainerComponent } from './container/container.component';
     NavComponent,
     CardComponent,
     FieldComponent,
-    ContainerComponent
+    ContainerComponent,
+    ActionComponent
   ],
   imports: [
     BrowserModule,
