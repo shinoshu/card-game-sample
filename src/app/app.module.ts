@@ -12,12 +12,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CardComponent } from './card/card.component';
+import { FieldComponent } from './field/field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    CardComponent
+    CardComponent,
+    FieldComponent
   ],
   imports: [
     BrowserModule,
