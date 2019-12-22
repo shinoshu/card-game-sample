@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Card } from '../card.enum';
 
 @Component({
   selector: 'app-card',
@@ -6,10 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() imagePath: string;
+  isFront = false;
+
+  @Input() card: Card;
+
+  image(): string {
+    return this.isFront ? this.card : Card.Back;
+  }
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  reverse() {
+    this.isFront = !this.isFront;
   }
 }

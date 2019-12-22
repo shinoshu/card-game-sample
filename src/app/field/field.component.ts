@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../card';
+import { Card } from '../card.enum';
 
 @Component({
   selector: 'app-field',
@@ -7,13 +7,13 @@ import { Card } from '../card';
   styleUrls: ['./field.component.scss']
 })
 export class FieldComponent implements OnInit {
-  imagePaths: string[] = [];
+  cards: Card[] = [];
 
   constructor() { }
 
   ngOnInit() {
-    for (let [key, value] of Object.entries(Card)) {
-      this.imagePaths.push(value);
+    for (const [key] of Object.entries(Card)) {
+      this.cards.push(Card[key]);
     }
   }
 }
