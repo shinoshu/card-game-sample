@@ -12,6 +12,7 @@ import { ContainerComponent } from './container/container.component';
 import { ActionComponent } from './action/action.component';
 import { CardDeckComponent } from './card-deck/card-deck.component';
 import { HitOrStandComponent } from './hit-or-stand/hit-or-stand.component';
+import { PointComponent } from './point/point.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HitOrStandComponent } from './hit-or-stand/hit-or-stand.component';
     ContainerComponent,
     ActionComponent,
     CardDeckComponent,
-    HitOrStandComponent
+    HitOrStandComponent,
+    PointComponent
   ],
   imports: [
     BrowserModule,
