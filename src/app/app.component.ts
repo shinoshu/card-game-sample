@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Card } from './card.enum';
 import { HitOrStandComponent } from './hit-or-stand/hit-or-stand.component';
+import { PointCalculatorService } from './point-calculator.service';
 import * as lodash from 'lodash';
 
 @Component({
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit {
   cards: Card[] = [];
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private pointCalculatorService: PointCalculatorService,
   ) { }
 
   ngOnInit() {
@@ -23,20 +25,19 @@ export class AppComponent implements OnInit {
       this.allCards.push(Card[key]);
     }
 
-    this.cards = lodash.shuffle(this.allCards);
-    this.cards = this.cards.slice(0, 2);
+    this.addCard(2);
 
     const dialogRef = this.dialog.open(HitOrStandComponent);
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'hit') {
-        this.addCard();
+        this.addCard(1);
       }
     });
   }
 
-  addCard() {
+  addCard(num: number) {
     const cards = lodash.shuffle(this.allCards);
-    const card = cards.slice(0, 1)[0];
-    this.cards.push(card);
+    const card = cards.slice(0, num);
+    this.cards.push(...card);
   }
 }
