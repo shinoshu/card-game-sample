@@ -18,4 +18,8 @@ export class FieldComponent implements OnInit {
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.cards, event.previousIndex, event.currentIndex);
   }
+
+  getNextPosition(): { x: number, y: number } {
+    return { x: 0, y: 0 };
+  }
 }
