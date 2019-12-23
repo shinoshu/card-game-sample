@@ -1,5 +1,9 @@
-<div>
+<div
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="drop($event)"
+>
   <ng-container *ngFor="let card of cards">
-    <app-card [card]="card" [isFront]="true"></app-card>
+    <app-card [card]="card" [isFront]="true" cdkDrag></app-card>
   </ng-container>
 </div>

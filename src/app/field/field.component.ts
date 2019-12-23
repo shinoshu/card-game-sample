@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Card } from '../card.enum';
 
 @Component({
@@ -12,5 +13,9 @@ export class FieldComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.cards, event.previousIndex, event.currentIndex);
   }
 }
