@@ -16,6 +16,7 @@ import { CardComponent } from './card/card.component';
 import { FieldComponent } from './field/field.component';
 import { ContainerComponent } from './container/container.component';
 import { ActionComponent } from './action/action.component';
+import { CardDeckComponent } from './card-deck/card-deck.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ActionComponent } from './action/action.component';
     CardComponent,
     FieldComponent,
     ContainerComponent,
-    ActionComponent
+    ActionComponent,
+    CardDeckComponent
   ],
   imports: [
     BrowserModule,
