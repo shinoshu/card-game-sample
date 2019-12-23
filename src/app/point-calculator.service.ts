@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Card } from './card.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -6,4 +7,8 @@ import { Injectable } from '@angular/core';
 export class PointCalculatorService {
 
   constructor() { }
+
+  calculate(cards: Card[]): number {
+    return 0;
+  }
 }
