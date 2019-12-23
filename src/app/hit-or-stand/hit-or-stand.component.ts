@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import * as lodash from 'lodash';
 
 @Component({
   selector: 'app-hit-or-stand',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HitOrStandComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private dialogRef: MatDialogRef<HitOrStandComponent>
+  ) { }
 
   ngOnInit() {
   }
 
+  action(event: string) {
+    this.dialogRef.close(event);
+  }
 }

@@ -26,10 +26,15 @@ export class AppComponent implements OnInit {
     this.cards = lodash.shuffle(this.allCards);
     this.cards = this.cards.slice(0, 2);
 
-    this.dialog.open(HitOrStandComponent);
+    const dialogRef = this.dialog.open(HitOrStandComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'hit') {
+        this.addCard();
+      }
+    });
   }
 
-  action() {
+  addCard() {
     const cards = lodash.shuffle(this.allCards);
     const card = cards.slice(0, 1)[0];
     this.cards.push(card);
