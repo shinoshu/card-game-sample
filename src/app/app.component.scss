@@ -1,5 +1,4 @@
-app-action {
-  bottom: 0;
+app-card-deck {
   position: absolute;
   right: 0;
 }
@@ -9,4 +8,10 @@ app-field {
   position: absolute;
   text-align: center;
   width: 100%;
+}
+
+app-action {
+  bottom: 0;
+  position: absolute;
+  right: 0;
 }

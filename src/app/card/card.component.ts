@@ -9,9 +9,11 @@ import { Card } from '../card.enum';
 export class CardComponent implements OnInit {
   backImage = 'assets/images/card_back.png';
 
+  @Input() card: Card;
+
   @Input() isFront = false;
 
-  @Input() card: Card;
+  @Input() disabled = false;
 
   image(): string {
     return this.isFront ? this.card : this.backImage;
@@ -23,6 +25,10 @@ export class CardComponent implements OnInit {
   }
 
   reverse() {
+    if (this.disabled) {
+      return;
+    }
+
     this.isFront = !this.isFront;
   }
 }
