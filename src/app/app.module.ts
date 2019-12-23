@@ -17,6 +17,7 @@ import { FieldComponent } from './field/field.component';
 import { ContainerComponent } from './container/container.component';
 import { ActionComponent } from './action/action.component';
 import { CardDeckComponent } from './card-deck/card-deck.component';
+import { HitOrStandComponent } from './hit-or-stand/hit-or-stand.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CardDeckComponent } from './card-deck/card-deck.component';
     FieldComponent,
     ContainerComponent,
     ActionComponent,
-    CardDeckComponent
+    CardDeckComponent,
+    HitOrStandComponent
   ],
   imports: [
     BrowserModule,
