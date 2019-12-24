@@ -16,7 +16,9 @@ import {
     trigger('inOut', [
       state('inDeck', style({
         opacity: 0.5,
-        transform: 'translate(-450px, 530px)',
+        transform: 'translate(-714.5px, 530px)',
+        // transform: 'translate(-534.5px, 530px)',
+        // transform: 'translate(-444.5px, 530px)',
       })),
       state('outDeck', style({
         opacity: 1,
